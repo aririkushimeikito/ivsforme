@@ -125,10 +125,11 @@
   /* Carla Sans brand font for headings, Bricolage kept for hero display */
   h2, h3, h4, .band-title, .club-tier, .card-name, .bundle-name { font-family:'Carla Sans','DM Sans',sans-serif; }
 
-  /* Footer contact row (site-wide) */
-  .footer-contact{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;max-width:940px;margin:0 auto 16px;padding:0 24px;font-size:13px;line-height:1.6;}
-  .footer-contact a,.footer-contact span{display:inline-flex;align-items:center;gap:7px;color:rgba(251,248,242,.85);text-decoration:none;font-weight:500;}
-  .footer-contact a:hover{color:#E8D24A;}
+  /* Footer contact row (site-wide) — pill chips matching the brand motif */
+  .footer-contact{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;max-width:940px;margin:0 auto 22px;padding:0 24px;}
+  .footer-contact a,.footer-contact span{display:inline-flex;align-items:center;gap:8px;color:rgba(251,248,242,.85);text-decoration:none;font-weight:500;font-size:12.5px;line-height:1;border:1px solid rgba(251,248,242,.25);border-radius:30px;padding:9px 16px;transition:all .15s;white-space:nowrap;}
+  .footer-contact a:hover{background:#E8D24A;border-color:#E8D24A;color:#1A1A1A;}
+  @media(max-width:480px){.footer-contact a,.footer-contact span{white-space:normal;text-align:left;line-height:1.4;}}
 </style>
 <link rel="stylesheet" href="responsive.css?v=2">
 </head>
