@@ -89,6 +89,20 @@
   .bottom-note{text-align:center;padding:48px 20px 32px;font-size:12px;color:rgba(26,26,26,.45);letter-spacing:.3px;line-height:2;font-weight:500;}
   @keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
   .prog-card{animation:pop .4s ease forwards;}
+  /* Weight loss calculator */
+  .calc{max-width:620px;margin:0 auto 52px;padding:0 24px;}
+  .calc-card{background:#fff;border:2px solid #1A1A1A;border-radius:24px;box-shadow:5px 5px 0 #1A1A1A;padding:36px 34px 30px;text-align:center;}
+  .calc-title{font-family:'Carla Sans','DM Sans',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px;}
+  .calc-sub{font-size:14px;color:rgba(26,26,26,.6);font-weight:500;margin-bottom:26px;}
+  .calc-slider{-webkit-appearance:none;appearance:none;width:100%;height:12px;border-radius:30px;border:2px solid #1A1A1A;background:linear-gradient(to right,#2E7D4F 0%,#2E7D4F 37.5%,#FBF8F2 37.5%,#FBF8F2 100%);outline:none;cursor:pointer;display:block;}
+  .calc-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:#E8D24A;border:2px solid #1A1A1A;box-shadow:2px 2px 0 #1A1A1A;cursor:grab;}
+  .calc-slider::-webkit-slider-thumb:active{cursor:grabbing;}
+  .calc-slider::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#E8D24A;border:2px solid #1A1A1A;box-shadow:2px 2px 0 #1A1A1A;cursor:grab;}
+  .calc-range-labels{display:flex;justify-content:space-between;font-size:11px;color:rgba(26,26,26,.45);font-weight:600;margin-top:10px;letter-spacing:.3px;}
+  .calc-current{font-family:'Bricolage Grotesque',sans-serif;font-size:42px;font-weight:800;letter-spacing:-1.5px;line-height:1;margin-top:22px;}
+  .calc-label{display:inline-block;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#123524;background:#9BC96B;padding:6px 14px;border-radius:30px;font-weight:700;margin-top:20px;}
+  .calc-result{font-family:'Bricolage Grotesque',sans-serif;font-size:48px;font-weight:800;letter-spacing:-2px;color:#2E7D4F;line-height:1;margin-top:12px;}
+  .calc-note{font-size:11px;color:rgba(26,26,26,.45);margin-top:20px;line-height:1.6;}
 
   .menu-wrap{position:relative;}
   .menu-btn{display:inline-flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;background:transparent;border:2px solid #1A1A1A;padding:8px 16px;border-radius:30px;cursor:pointer;transition:all .15s;}
@@ -167,6 +181,18 @@
   <h1>results, backed<br>by <span class="hl">real medicine</span></h1>
   <p class="hero-sub">Physician-led GLP-1 programs for sustainable weight loss. Same clinically-proven medications, real supervision, transparent monthly pricing.</p>
 </div>
+<div class="calc">
+  <div class="calc-card">
+    <div class="calc-title">weight loss calculator</div>
+    <div class="calc-sub">Select your current weight</div>
+    <input type="range" class="calc-slider" id="calcSlider" min="100" max="500" step="1" value="250" aria-label="Your current weight in pounds">
+    <div class="calc-range-labels"><span>100 lbs</span><span>500 lbs</span></div>
+    <div class="calc-current" id="calcCurrent">250 lbs</div>
+    <div class="calc-label">Weight you could lose</div>
+    <div class="calc-result" id="calcResult">50.0 lbs</div>
+    <div class="calc-note">Estimate based on average results of up to ~20% body-weight reduction seen in GLP-1 clinical trials. Individual results vary — your provider will set realistic goals with you.</div>
+  </div>
+</div>
 <div class="programs">
   <div class="prog-card">
     <span class="prog-tag">GLP-1</span>
@@ -233,6 +259,22 @@
     var m = document.getElementById('siteMenu');
     if(m && !e.target.closest('.menu-wrap')){ m.classList.remove('open'); }
   });
+</script>
+<script>
+  (function(){
+    var s = document.getElementById('calcSlider');
+    var cur = document.getElementById('calcCurrent');
+    var res = document.getElementById('calcResult');
+    function update(){
+      var v = +s.value;
+      var pct = ((v - s.min) / (s.max - s.min)) * 100;
+      s.style.background = 'linear-gradient(to right,#2E7D4F 0%,#2E7D4F ' + pct + '%,#FBF8F2 ' + pct + '%,#FBF8F2 100%)';
+      cur.textContent = v + ' lbs';
+      res.textContent = (v * 0.2).toFixed(1) + ' lbs';
+    }
+    s.addEventListener('input', update);
+    update();
+  })();
 </script>
 </body>
 </html>
