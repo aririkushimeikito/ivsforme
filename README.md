@@ -27,5 +27,7 @@ cards, and JSON-LD structured data (`MedicalClinic`, `MedicalWebPage`, `FAQPage`
 
 ## Deploy
 
-Pushing to `main` triggers `.github/workflows/deploy-pages.yml`, which publishes the site to
-GitHub Pages. Live at: https://aririkushimeikito.github.io/ivsforme/
+Served via GitHub Pages from `main`. One-time setup: **Settings → Pages → Source: "Deploy from a
+branch" → Branch `main` / `(root)` → Save**. GitHub rebuilds automatically on every push to `main`.
+
+Live at: https://aririkushimeikito.github.io/ivsforme/
