@@ -212,7 +212,13 @@
   <div class="card" data-cat="premium wellness"><span class="card-tag">Longevity</span><span class="tag-pill tag-premium" style="position:absolute;top:22px;right:20px;">longevity</span><div class="card-name">Iron Therapy</div><div class="card-desc">Persistent fatigue is often low iron. Replenish your levels and restore energy with pharmaceutical-grade iron.</div><div class="card-footer"><div class="card-price price-premium">$400</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
   <div class="card" data-cat="premium wellness recovery"><span class="card-tag">Longevity</span><span class="tag-pill tag-new" style="position:absolute;top:22px;right:20px;">new</span><div class="card-name">Inflammation Relief</div><div class="card-desc">Chronic inflammation ages you faster. A nutrient-rich infusion with hydration, antioxidants, and vitamins to help your body recover.</div><div class="card-footer"><div class="card-price price-premium">$400</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
 </div>
-<div class="bottom-note">Every drip administered by a licensed MD, PA, or NP 🩺 · Queens &amp; Long Island<br>Free B-12 with every drip · Buy 5 get 1 free · $20 off your first visit with WELCOME20</div>
+<div class="footer-contact">
+    <a href="https://www.google.com/maps/search/?api=1&query=142-42+Booth+Memorial+Ave%2C+Flushing%2C+NY+11355" target="_blank" rel="noopener noreferrer">📍 142-42 Booth Memorial Ave, Flushing, NY 11355</a>
+    <a href="tel:+15163633334">📞 516-363-3334</a>
+    <a href="mailto:ivsformeteam@gmail.com">✉️ ivsformeteam@gmail.com</a>
+    <span>🕐 Mon–Fri · Sat by appointment only</span>
+  </div>
+  <div class="bottom-note">Every drip administered by a licensed MD, PA, or NP 🩺 · Queens &amp; Long Island<br>Free B-12 with every drip · Buy 5 get 1 free · $20 off your first visit with WELCOME20</div>
 <script>
   document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.card').forEach(c=>{if(f==='all'){c.classList.remove('hidden');}else{c.classList.toggle('hidden',!(c.dataset.cat||'').includes(f));}});});});
   function copyCode(){navigator.clipboard.writeText('WELCOME20').catch(()=>{});const b=document.getElementById('code-btn');b.textContent='copied! ✓';b.classList.add('copied');setTimeout(()=>{b.textContent='WELCOME20 · tap to copy';b.classList.remove('copied');},2000);}
