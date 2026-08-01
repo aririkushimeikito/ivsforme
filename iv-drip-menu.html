@@ -78,23 +78,6 @@
   .bottom-note{text-align:center;padding:48px 20px 32px;font-size:12px;color:rgba(26,26,26,.45);letter-spacing:.3px;line-height:2;font-weight:500;}
   @keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
-  /* ===== Shared IVS FOR ME nav ===== */
-  .site-nav{position:sticky;top:0;z-index:100;background:rgba(251,248,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:2px solid #1A1A1A;}
-  .nav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-  .nav-logo{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:800;letter-spacing:-.5px;color:#123524;text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;}
-  .nav-logo .drop{color:#6FA5C9;}
-  .nav-links{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
-  .nav-links a{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;text-decoration:none;padding:8px 14px;border-radius:30px;transition:all .18s;white-space:nowrap;}
-  .nav-links a:hover{background:rgba(26,26,26,.07);}
-  .nav-links a.active{background:#123524;color:#FBF8F2;}
-  .nav-toggle{display:none;background:none;border:2px solid #1A1A1A;border-radius:10px;padding:6px 10px;cursor:pointer;font-size:16px;line-height:1;}
-  @media(max-width:860px){
-    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#FBF8F2;border-bottom:2px solid #1A1A1A;flex-direction:column;align-items:stretch;padding:12px 24px 18px;gap:4px;}
-    .nav-links.open{display:flex;}
-    .nav-links a{padding:12px 14px;}
-    .nav-toggle{display:block;}
-    .nav-inner{position:relative;}
-  }
   .menu-wrap{position:relative;}
   .menu-btn{display:inline-flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#1A1A1A;background:transparent;border:2px solid #1A1A1A;padding:8px 16px;border-radius:30px;cursor:pointer;transition:all .15s;}
   .menu-btn:hover{background:#1A1A1A;color:#FBF8F2;}
@@ -143,24 +126,6 @@
       </div>
     </div>
     <a href="https://www.zocdoc.com/practice/jumpstart-medical-75416" target="_blank" rel="noopener noreferrer" class="nav-cta">Book now</a>
-  </div>
-</nav>
-
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">IVS FOR ME <span class="drop">💧</span></a>
-    <button class="nav-toggle" onclick="var l=document.getElementById('navlinks');l.classList.toggle('open');">☰</button>
-    <div class="nav-links" id="navlinks">
-      <a href="iv-drip-menu.html" class="active">IV Drips</a>
-      <a href="iv-membership.html">Membership</a>
-      <a href="weight-loss.html">Weight Loss</a>
-      <a href="semaglutide.html">Semaglutide</a>
-      <a href="tirzepatide.html">Tirzepatide</a>
-        <a href="retatrutide.html">Retatrutide</a>
-    <a href="blog.html">Blog</a>
-    <a href="faq.html">FAQ</a>
-      <a href="https://www.zocdoc.com/practice/jumpstart-medical-75416" target="_blank" rel="noopener noreferrer" class="nav-cta">Book Now</a>
-    </div>
   </div>
 </nav>
 
