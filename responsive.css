@@ -1,0 +1,44 @@
+/* ============================================================
+   IVs For Me — global responsive layer
+   Loaded LAST in <head> so it overrides each page's inline
+   <style>. Keeps the existing design; only adjusts layout so
+   every page works on desktop, laptop, tablet, and mobile.
+   ============================================================ */
+
+html { -webkit-text-size-adjust: 100%; }
+img, svg, video { max-width: 100%; height: auto; }
+
+/* Wide comparison tables scroll inside their own box instead of the page */
+.compare-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 20px; }
+
+/* ---------- Tablet (portrait) and small laptops: ≤ 900px ---------- */
+@media (max-width: 900px) {
+  /* Dense 4-col rows drop to 2 */
+  .why-grid, .how-grid, .bundles, .value-strip-inner, .stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* Content-heavy 2/3-col card rows stack to 1 */
+  .service-grid, .programs, .benefits, .club-grid,
+  .cards-standard, .journal-grid, .featured, .nad-card {
+    grid-template-columns: 1fr !important;
+  }
+  /* Auto-fill card grids: tighten the minimum so they never overflow */
+  .prog-grid, .menu-grid, .blog-grid, .related-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+  }
+}
+
+/* ---------- Phones: ≤ 600px ---------- */
+@media (max-width: 600px) {
+  .service-grid, .why-grid, .journal-grid, .stats, .benefits, .how-grid,
+  .programs, .cards-standard, .value-strip-inner, .bundles, .club-grid,
+  .featured, .nad-card, .prog-grid, .menu-grid, .blog-grid, .related-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Trim oversized section padding so content breathes on narrow screens */
+  .hero { padding-left: 20px !important; padding-right: 20px !important; }
+  /* Comparison tables: keep readable and inside the viewport */
+  .compare th, .compare td { font-size: 12px !important; padding: 10px 8px !important; }
+  /* Accordions: don't clip long answers that wrap to more lines on mobile */
+  .faq-item.open .faq-a { max-height: 1200px !important; }
+}

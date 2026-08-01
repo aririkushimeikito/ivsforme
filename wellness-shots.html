@@ -125,6 +125,7 @@
   /* Carla Sans brand font for headings, Bricolage kept for hero display */
   h2, h3, h4, .band-title, .club-tier, .card-name, .bundle-name { font-family:'Carla Sans','DM Sans',sans-serif; }
 </style>
+<link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:100;background:#FBF8F2;border-bottom:2px solid #1A1A1A;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;gap:12px;font-family:'DM Sans',sans-serif;">
@@ -149,7 +150,7 @@
         <a href="faq.html">FAQ</a>
       </div>
     </div>
-    <a href="#book" class="nav-cta">Book now</a>
+    <a href="https://www.zocdoc.com/practice/jumpstart-medical-75416" target="_blank" rel="noopener noreferrer" class="nav-cta">Book now</a>
   </div>
 </nav>
 <div class="promo-bar">
@@ -184,23 +185,23 @@
   <button class="filter-btn" data-filter="longevity">longevity</button>
 </div>
 <div class="menu-grid" id="grid">
-  <div class="card" data-cat="core"><span class="card-tag">Core</span><div class="card-name">Energy Reset</div><div class="card-ingredient">Vitamin B12</div><div class="card-desc">Recharge your energy, mood, and focus. The go-to shot for beating fatigue and staying sharp through a busy day.</div><div class="card-footer"><div class="card-price">$35</div><button class="card-btn">book now</button></div></div>
-  <div class="card" data-cat="core"><span class="card-tag">Core</span><div class="card-name">Stress Shield</div><div class="card-ingredient">B-Complex</div><div class="card-desc">Support your nervous system and fight burnout. A full spectrum of B vitamins to keep stress in check.</div><div class="card-footer"><div class="card-price">$45</div><button class="card-btn">book now</button></div></div>
-  <div class="card" data-cat="core"><span class="card-tag">Core</span><div class="card-name">Sunshine Boost</div><div class="card-ingredient">Vitamin D3</div><div class="card-desc">Immunity, mood, and bone support in one shot. Perfect for anyone short on sunlight or feeling run down.</div><div class="card-footer"><div class="card-price">$45</div><button class="card-btn">book now</button></div></div>
-  <div class="card" data-cat="metabolism"><span class="card-tag">Metabolism</span><span class="tag-pill tag-metabolism">metabolism</span><div class="card-name">Metabolic Ignite</div><div class="card-ingredient">Lipostat (MIC + B12)</div><div class="card-desc">Support fat metabolism and weight-loss goals. A lipotropic blend that helps your body process and burn fat.</div><div class="card-footer"><div class="card-price">$49</div><button class="card-btn">book now</button></div></div>
-  <div class="card" data-cat="core"><span class="card-tag">Core</span><div class="card-name">Beauty Boost</div><div class="card-ingredient">Biotin</div><div class="card-desc">Nourish your hair, skin, and nails from the inside. The beauty essential for a healthy, natural glow.</div><div class="card-footer"><div class="card-price">$45</div><button class="card-btn">book now</button></div></div>
-  <div class="card" data-cat="antioxidant"><span class="card-tag">Antioxidant</span><span class="tag-pill tag-antiox">antioxidant</span><div class="card-name">Glow Defense</div><div class="card-ingredient">Glutathione</div><div class="card-desc">The master antioxidant for radiant skin. Fights oxidative stress and brightens your complexion.</div><div class="card-footer"><div class="card-price">$59</div><button class="card-btn">book now</button></div></div>
-  <div class="card" data-cat="longevity"><span class="card-tag">Longevity</span><span class="tag-pill tag-longevity">longevity</span><div class="card-name">Cellular Recharge</div><div class="card-ingredient">NAD+ IM</div><div class="card-desc">Energy, mental clarity, and healthy aging in a single shot. NAD+ supports cellular repair at the source.</div><div class="card-footer"><div class="card-price">$79</div><button class="card-btn">book now</button></div></div>
+  <div class="card" data-cat="core"><span class="card-tag">Core</span><div class="card-name">Energy Reset</div><div class="card-ingredient">Vitamin B12</div><div class="card-desc">Recharge your energy, mood, and focus. The go-to shot for beating fatigue and staying sharp through a busy day.</div><div class="card-footer"><div class="card-price">$35</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
+  <div class="card" data-cat="core"><span class="card-tag">Core</span><div class="card-name">Stress Shield</div><div class="card-ingredient">B-Complex</div><div class="card-desc">Support your nervous system and fight burnout. A full spectrum of B vitamins to keep stress in check.</div><div class="card-footer"><div class="card-price">$45</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
+  <div class="card" data-cat="core"><span class="card-tag">Core</span><div class="card-name">Sunshine Boost</div><div class="card-ingredient">Vitamin D3</div><div class="card-desc">Immunity, mood, and bone support in one shot. Perfect for anyone short on sunlight or feeling run down.</div><div class="card-footer"><div class="card-price">$45</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
+  <div class="card" data-cat="metabolism"><span class="card-tag">Metabolism</span><span class="tag-pill tag-metabolism">metabolism</span><div class="card-name">Metabolic Ignite</div><div class="card-ingredient">Lipostat (MIC + B12)</div><div class="card-desc">Support fat metabolism and weight-loss goals. A lipotropic blend that helps your body process and burn fat.</div><div class="card-footer"><div class="card-price">$49</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
+  <div class="card" data-cat="core"><span class="card-tag">Core</span><div class="card-name">Beauty Boost</div><div class="card-ingredient">Biotin</div><div class="card-desc">Nourish your hair, skin, and nails from the inside. The beauty essential for a healthy, natural glow.</div><div class="card-footer"><div class="card-price">$45</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
+  <div class="card" data-cat="antioxidant"><span class="card-tag">Antioxidant</span><span class="tag-pill tag-antiox">antioxidant</span><div class="card-name">Glow Defense</div><div class="card-ingredient">Glutathione</div><div class="card-desc">The master antioxidant for radiant skin. Fights oxidative stress and brightens your complexion.</div><div class="card-footer"><div class="card-price">$59</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
+  <div class="card" data-cat="longevity"><span class="card-tag">Longevity</span><span class="tag-pill tag-longevity">longevity</span><div class="card-name">Cellular Recharge</div><div class="card-ingredient">NAD+ IM</div><div class="card-desc">Energy, mental clarity, and healthy aging in a single shot. NAD+ supports cellular repair at the source.</div><div class="card-footer"><div class="card-price">$79</div><button class="card-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div></div>
 </div>
 
 <div class="section-band">
   <div class="band-title">best-selling bundles</div>
   <div class="band-lead">Stack your favorites and save. Combos built for maximum results.</div>
   <div class="bundles">
-    <div class="bundle"><div class="bundle-name">Glow + Beauty Duo</div><div class="bundle-mix">Biotin + Glutathione</div><div class="bundle-price">$89</div><button class="bundle-btn">book now</button></div>
-    <div class="bundle"><div class="bundle-name">Metabolic Reset Duo</div><div class="bundle-mix">Lipostat + B12</div><div class="bundle-price">$89</div><button class="bundle-btn">book now</button></div>
-    <div class="bundle"><div class="bundle-name">Longevity Elite</div><div class="bundle-mix">NAD+ + Glutathione</div><div class="bundle-price">$129</div><button class="bundle-btn">book now</button></div>
-    <div class="bundle dark"><div class="bundle-name">Ultimate Trio</div><div class="bundle-mix">NAD+ + Glutathione + Biotin</div><div class="bundle-price">$149</div><button class="bundle-btn">book now</button></div>
+    <div class="bundle"><div class="bundle-name">Glow + Beauty Duo</div><div class="bundle-mix">Biotin + Glutathione</div><div class="bundle-price">$89</div><button class="bundle-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div>
+    <div class="bundle"><div class="bundle-name">Metabolic Reset Duo</div><div class="bundle-mix">Lipostat + B12</div><div class="bundle-price">$89</div><button class="bundle-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div>
+    <div class="bundle"><div class="bundle-name">Longevity Elite</div><div class="bundle-mix">NAD+ + Glutathione</div><div class="bundle-price">$129</div><button class="bundle-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div>
+    <div class="bundle dark"><div class="bundle-name">Ultimate Trio</div><div class="bundle-mix">NAD+ + Glutathione + Biotin</div><div class="bundle-price">$149</div><button class="bundle-btn" onclick="window.open('https://www.zocdoc.com/practice/jumpstart-medical-75416','_blank','noopener')">book now</button></div>
   </div>
 </div>
 
@@ -233,7 +234,7 @@
 <div class="final-cta" id="book">
   <h2>ready in minutes</h2>
   <p>Walk in or book ahead. Get $20 off your first visit with code WELCOME20.</p>
-  <a href="#" class="btn">Book your shot</a>
+  <a href="https://www.zocdoc.com/practice/jumpstart-medical-75416" target="_blank" rel="noopener noreferrer" class="btn">Book your shot</a>
 </div>
 <div class="footer">
   <div class="footer-links">
