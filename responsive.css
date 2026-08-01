@@ -11,24 +11,8 @@ img, svg, video { max-width: 100%; height: auto; }
 /* Wide comparison tables scroll inside their own box instead of the page */
 .compare-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 20px; }
 
-/* Site-wide footer contact (NAP) row — light text for the dark footer */
-.footer-contact { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-  gap: 8px 22px; max-width: 940px; margin: 0 auto 16px; padding: 0 24px;
-  font-size: 13px; line-height: 1.6; }
-.footer-contact a, .footer-contact span { display: inline-flex; align-items: center; gap: 7px;
-  color: rgba(251, 248, 242, .85); text-decoration: none; font-weight: 500; }
-.footer-contact a:hover { color: #E8D24A; }
-
-/* Homepage "Visit us" strip */
-.visit { max-width: 1000px; margin: 72px auto 0; padding: 0 24px; }
-.visit-card { background: #fff; border: 2px solid #1A1A1A; border-radius: 24px;
-  box-shadow: 5px 5px 0 #1A1A1A; padding: 34px 30px; margin-top: 36px;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: center; }
-.visit-item .visit-ic { font-size: 26px; margin-bottom: 10px; }
-.visit-item h4 { font-family: 'Carla Sans','DM Sans',sans-serif; font-size: 15px; margin-bottom: 6px; letter-spacing: -.2px; }
-.visit-item p, .visit-item a { font-size: 14px; color: rgba(26,26,26,.65); text-decoration: none; line-height: 1.55; display: block; }
-.visit-item a:hover { color: #2E7D4F; }
-@media (max-width: 640px) { .visit-card { grid-template-columns: 1fr; } }
+/* (Visit-us and footer-contact styles live inline in each page's <style>
+   block, matching the site's per-page styling pattern.) */
 
 /* ---------- Tablet (portrait) and small laptops: ≤ 900px ---------- */
 @media (max-width: 900px) {
