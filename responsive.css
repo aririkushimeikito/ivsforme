@@ -38,6 +38,16 @@ img, svg, video { max-width: 100%; height: auto; }
   .featured, .nad-card, .prog-grid, .menu-grid, .blog-grid, .related-grid {
     grid-template-columns: 1fr !important;
   }
+  /* Nav: keep the logo + Menu + Book now on one row, and never let the
+     "Book now" button wrap to two lines. Tighten spacing and let the wide
+     wordmark logo scale down to make room. */
+  nav[style*="sticky"] { padding-left: 14px !important; padding-right: 14px !important; gap: 8px !important; }
+  nav[style*="sticky"] > a[aria-label] { flex: 0 1 auto; min-width: 0; }
+  nav[style*="sticky"] > a[aria-label] svg { width: 100% !important; height: auto !important; max-width: 40vw; max-height: 26px; }
+  nav[style*="sticky"] > div { gap: 8px !important; }
+  .menu-btn, .nav-cta { white-space: nowrap; flex-shrink: 0; }
+  .menu-btn { padding: 8px 12px !important; }
+  .nav-cta { padding: 9px 14px !important; }
   /* Trim oversized section padding so content breathes on narrow screens */
   .hero { padding-left: 20px !important; padding-right: 20px !important; }
   /* Comparison tables: keep readable and inside the viewport */
