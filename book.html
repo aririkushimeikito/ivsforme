@@ -266,6 +266,12 @@
 </script>
 <script>
 (function(){
+  // Booking database: Google Sheet
+  // https://docs.google.com/spreadsheets/d/1GFyaPiBWergJKMKeKlnj3Hh-2yiyuTtaJ3iP65nt0zM/
+  // One-time setup: create the Apps Script Web App per BOOKING-SHEET-SETUP.md,
+  // then paste its /exec URL between the quotes below.
+  var SHEET_WEBHOOK = "";
+
   var form = document.getElementById('bookForm');
   var dateEl = document.getElementById('bDate');
   var err = document.getElementById('bError');
@@ -306,7 +312,20 @@
     if(dayOf(date) === 0){ showErr("We're closed Sundays — please pick Monday–Saturday."); return; }
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ showErr('That email address doesn\u2019t look right \u2014 mind double-checking it?'); return; }
 
+    var notes = document.getElementById('bNotes').value.trim() || '—';
     btn.disabled = true; btn.textContent = 'Sending…';
+
+    // Save the booking into the Google Sheet database (fire-and-forget; see BOOKING-SHEET-SETUP.md)
+    if (SHEET_WEBHOOK) {
+      try {
+        fetch(SHEET_WEBHOOK, {
+          method: 'POST', mode: 'no-cors',
+          headers: {'Content-Type': 'text/plain'},
+          body: JSON.stringify({service:service, date:date, time:time, name:name, phone:phone, email:email, notes:notes})
+        }).catch(function(){});
+      } catch(_) {}
+    }
+
     fetch('https://formsubmit.co/ajax/info@ivsforme.com', {
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
@@ -319,7 +338,7 @@
         Name: name,
         Phone: phone,
         Email: email,
-        Notes: document.getElementById('bNotes').value.trim() || '—'
+        Notes: notes
       })
     }).then(function(r){ if(!r.ok) throw 0; return r.json(); })
       .then(function(){
