@@ -29,6 +29,24 @@ img, svg, video { max-width: 100%; height: auto; }
   .nav-desktop a { font-size: 12px; padding: 7px 8px; }
   nav[style*="sticky"] > a[aria-label] svg { height: 26px !important; }
 }
+/* Weight Loss dropdown (desktop) */
+.nav-desktop .nav-group { position: relative; display: inline-flex; }
+.nav-desktop .nav-group > a { display: inline-flex; align-items: center; gap: 5px; }
+.nav-desktop .nav-group > a::after { content: "▾"; font-size: 9px; opacity: .55; }
+.nav-desktop .nav-group::after { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
+.nav-sub { position: absolute; top: calc(100% + 8px); left: 0; background: #FBF8F2;
+  border: 2px solid #1A1A1A; border-radius: 14px; box-shadow: 4px 4px 0 #1A1A1A;
+  padding: 6px; min-width: 180px; display: none; flex-direction: column; gap: 2px; z-index: 200; }
+.nav-desktop .nav-group:hover .nav-sub, .nav-desktop .nav-group:focus-within .nav-sub { display: flex; }
+.nav-sub a { padding: 9px 12px !important; border-radius: 10px; font-size: 13px !important;
+  font-weight: 600; color: rgba(26,26,26,.8); white-space: nowrap; }
+.nav-sub a::after { content: none !important; }
+.nav-sub a:hover { background: #1A1A1A; color: #FBF8F2; }
+.nav-sub a.active { background: #123524; color: #FBF8F2; }
+
+/* Weight Loss group in the mobile hamburger menu: indent the three medications */
+.menu-dropdown a.submenu { padding-left: 28px; font-size: 13px; color: rgba(26,26,26,.6); }
+.menu-dropdown a.submenu::before { content: "–"; margin-right: 8px; opacity: .4; }
 
 /* (Visit-us and footer-contact styles live inline in each page's <style>
    block, matching the site's per-page styling pattern.) */
