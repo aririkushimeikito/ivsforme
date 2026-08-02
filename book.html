@@ -218,7 +218,7 @@
       <h3>visit us</h3>
       <div class="side-item"><span class="ic">📍</span><span>142-42 Booth Memorial Ave<br>Flushing, NY 11355<br><a href="https://www.google.com/maps/search/?api=1&query=142-42+Booth+Memorial+Ave%2C+Flushing%2C+NY+11355" target="_blank" rel="noopener noreferrer">Get directions →</a></span></div>
       <div class="side-item"><span class="ic">📞</span><a href="tel:+15163633334">516-363-3334</a></div>
-      <div class="side-item"><span class="ic">✉️</span><a href="mailto:ivsformeteam@gmail.com">ivsformeteam@gmail.com</a></div>
+      <div class="side-item"><span class="ic">✉️</span><a href="mailto:info@ivsforme.com">info@ivsforme.com</a></div>
       <div class="side-item"><span class="ic">🕐</span><span>Mon–Fri · Sat by appointment only</span></div>
     </div>
     <div class="side-steps">
@@ -247,7 +247,7 @@
   <div class="footer-contact">
     <a href="https://www.google.com/maps/search/?api=1&query=142-42+Booth+Memorial+Ave%2C+Flushing%2C+NY+11355" target="_blank" rel="noopener noreferrer">📍 142-42 Booth Memorial Ave, Flushing, NY 11355</a>
     <a href="tel:+15163633334">📞 516-363-3334</a>
-    <a href="mailto:ivsformeteam@gmail.com">✉️ ivsformeteam@gmail.com</a>
+    <a href="mailto:info@ivsforme.com">✉️ info@ivsforme.com</a>
     <span>🕐 Mon–Fri · Sat by appointment only</span>
   </div>
   <div class="footer-note">
@@ -306,7 +306,7 @@
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ showErr('That email address doesn\u2019t look right \u2014 mind double-checking it?'); return; }
 
     btn.disabled = true; btn.textContent = 'Sending…';
-    fetch('https://formsubmit.co/ajax/ivsformeteam@gmail.com', {
+    fetch('https://formsubmit.co/ajax/info@ivsforme.com', {
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body: JSON.stringify({
@@ -328,7 +328,7 @@
       })
       .catch(function(){
         btn.disabled = false; btn.textContent = 'Request my appointment';
-        showErr('Something went wrong sending your request. Please call us at 516-363-3334 or email ivsformeteam@gmail.com.');
+        showErr('Something went wrong sending your request. Please call us at 516-363-3334 or email info@ivsforme.com.');
       });
   });
 })();
