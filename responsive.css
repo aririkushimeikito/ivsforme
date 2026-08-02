@@ -8,6 +8,11 @@
 html { -webkit-text-size-adjust: 100%; }
 img, svg, video { max-width: 100%; height: auto; }
 
+/* Header logo must never shrink or clip — keep the full "IVs For Me" wordmark
+   intact at every width (the ≤600px block below intentionally scales it down). */
+nav[style*="sticky"] > a[aria-label] { flex-shrink: 0; }
+nav[style*="sticky"] > a[aria-label] svg { flex-shrink: 0; width: auto; height: 30px; max-width: none; }
+
 /* Wide comparison tables scroll inside their own box instead of the page */
 .compare-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 20px; }
 
