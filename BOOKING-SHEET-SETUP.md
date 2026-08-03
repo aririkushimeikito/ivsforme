@@ -1,7 +1,7 @@
 # Booking Database — Google Sheet Setup (one-time, ~3 minutes)
 
 The booking form on `book.html` saves every request into your Google Sheet:
-https://docs.google.com/spreadsheets/d/1GFyaPiBWergJKMKeKlnj3Hh-2yiyuTtaJ3iP65nt0zM/
+https://docs.google.com/spreadsheets/d/16xoHNUmSMwFv06YGVANO_BzWGLsWw4cjQYutp0EH7tU/
 
 A static website cannot write to a Google Sheet directly (that would require
 exposing write credentials to visitors). The standard, free bridge is a tiny
@@ -14,7 +14,7 @@ exposing write credentials to visitors). The standard, free bridge is a tiny
 ## Step 2 — Paste this code (replace anything in the editor)
 
 ```javascript
-const SHEET_ID = '1GFyaPiBWergJKMKeKlnj3Hh-2yiyuTtaJ3iP65nt0zM';
+const SHEET_ID = '16xoHNUmSMwFv06YGVANO_BzWGLsWw4cjQYutp0EH7tU';
 
 function doPost(e) {
   const sh = SpreadsheetApp.openById(SHEET_ID).getSheets()[0];

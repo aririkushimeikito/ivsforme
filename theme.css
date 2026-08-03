@@ -114,10 +114,13 @@ nav[style*="sticky"] > a[aria-label]{color:#0F1220 !important;}
 .hero-media{position:relative;}
 .hero-media img{width:100%;height:auto;border-radius:26px;display:block;box-shadow:0 26px 60px rgba(18,45,30,.22);}
 .hero-media::after{content:"";position:absolute;inset:0;border-radius:26px;background:linear-gradient(200deg,rgba(46,125,79,.16),transparent 55%);pointer-events:none;}
+.hero.has-media .trust{grid-column:1 / -1;max-width:none !important;margin:10px 0 0 !important;padding:0 !important;justify-content:flex-start !important;flex-wrap:nowrap !important;gap:26px !important;}
+.hero.has-media .trust-item{white-space:nowrap;}
 @media(max-width:880px){
   .hero.has-media{grid-template-columns:1fr;text-align:center !important;gap:26px;}
   .hero.has-media .hero-copy{max-width:640px;margin:0 auto;}
   .hero.has-media .hero-cta{justify-content:center !important;}
+  .hero.has-media .trust{flex-wrap:wrap !important;justify-content:center !important;gap:12px 20px !important;}
 }
 
 /* ---------- Homepage photo band ---------- */
