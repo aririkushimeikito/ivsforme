@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ivsforme.com/sitemap.xml
+Sitemap: https://www.ivsforme.co/sitemap.xml
