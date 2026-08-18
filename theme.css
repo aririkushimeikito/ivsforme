@@ -4,7 +4,6 @@
    orange accent, uppercase letter-spaced headings, photography, and soft
    shadows in place of the hard offset style.
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 :root{
   --blue:#2E7D4F; --blue-dark:#1F5C3B; --navy:#123524; --ink:#101323;
@@ -16,7 +15,7 @@
 body{background:#fff !important;color:var(--ink);}
 .blob{display:none !important;}
 h1{font-family:'Montserrat',sans-serif !important;text-transform:uppercase;letter-spacing:.08em !important;font-weight:700 !important;line-height:1.16 !important;font-size:clamp(30px,4.4vw,50px) !important;color:var(--ink);}
-h2,h3,h4,.services-title,.how-title,.section-title,.section-head,.sh,.prog-name,.card-name,.tier-name,.calc-title,.club-name,.benefit h4,.dual-card h3{font-family:'Montserrat',sans-serif !important;text-transform:uppercase;letter-spacing:.12em;font-weight:600;}
+h2,h3,h4,.services-title,.how-title,.section-title,.section-head,.sh,.prog-name,.card-name,.tier-name,.calc-title,.club-name,.benefit h4,.dual-card h3,.bundle-name,.intro-line,.prog-tagline{font-family:'Montserrat',sans-serif !important;text-transform:uppercase;letter-spacing:.12em;font-weight:600;}
 .services-title,.how-title,.section-title{font-size:clamp(19px,2.3vw,27px) !important;letter-spacing:.22em !important;color:var(--ink);}
 .final-cta h2{font-size:clamp(21px,2.8vw,30px) !important;letter-spacing:.18em !important;}
 /* long-form titles stay sentence case for readability */
@@ -134,3 +133,13 @@ nav[style*="sticky"] > a[aria-label]{color:#0F1220 !important;}
 /* ---------- Article hero photos ---------- */
 .media-box img{width:100%;height:100%;object-fit:cover;border-radius:22px;display:block;}
 .featured-media img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* ---------- Accessibility ---------- */
+.footer-note{color:rgba(251,248,242,.66) !important;}
+.footer-links a{color:rgba(251,248,242,.82) !important;}
+.book-fineprint,.newsletter-note{color:rgba(26,26,26,.6) !important;}
+@media(max-width:900px){
+  .footer-links a{padding:11px 14px !important;}
+  .footer-contact a,.footer-contact span{padding:6px 2px;}
+  .nav-desktop a{padding:11px 12px !important;}
+}

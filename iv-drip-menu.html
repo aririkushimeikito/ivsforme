@@ -25,10 +25,9 @@
 <meta name="twitter:description" content="Explore 15+ physician-formulated IV drips for immunity, recovery, beauty, performance, and longevity — including NAD+, Myers Cocktail, and Glow. From $250 with a free B-12 shot.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"IV Drip Menu","description":"Physician-formulated IV drips for immunity, recovery, beauty, performance, and longevity.","mainEntityOfPage":"https://www.ivsforme.com/iv-drip-menu.html","about":"IV Therapy","publisher":{"@type":"Organization","name":"IVs For Me"},"medicalAudience":{"@type":"MedicalAudience","audienceType":"Patient"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ivsforme.com/index.html"},{"@type":"ListItem","position":2,"name":"IV Drips","item":"https://www.ivsforme.com/iv-drip-menu.html"}]}</script>
-<link rel="stylesheet" href="carla-sans.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * { margin:0;padding:0;box-sizing:border-box; }
   body { background:#FBF8F2;color:#1A1A1A;font-family:'DM Sans',sans-serif; }
@@ -108,7 +107,7 @@
   @media(max-width:520px){.footer-contact a,.footer-contact span{white-space:normal;line-height:1.5;}}
 </style>
 <link rel="stylesheet" href="responsive.css?v=9">
-<link rel="stylesheet" href="theme.css?v=3">
+<link rel="stylesheet" href="theme.css?v=4">
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:100;background:#FBF8F2;border-bottom:2px solid #1A1A1A;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;gap:12px;font-family:'DM Sans',sans-serif;">
@@ -156,6 +155,7 @@
     </div>
   </div>
 </div>
+<main>
 <div class="new-patient-banner">
   <span class="new-patient-badge">first visit?</span>
   <span class="new-patient-text"><strong>$20 off your first drip.</strong> transparent pricing, physician-led, no consult required.</span>
@@ -167,7 +167,7 @@
   <h1>invest in your<br><span class="hl">healthspan</span></h1>
   <p class="hero-sub">Physician-led IV therapy for people who take longevity seriously. Optimize energy, recovery, and cellular health — on your schedule.</p>
 </div>
-  <div class="hero-media"><img src="images/compassionate-care.jpg" alt="Nurse caring for a smiling patient during an IV visit" loading="eager" width="1080" height="750"></div>
+  <div class="hero-media"><img src="images/compassionate-care.jpg" alt="Nurse caring for a smiling patient during an IV visit" loading="eager" width="1080" height="750" fetchpriority="high" srcset="images/compassionate-care-640.jpg 640w, images/compassionate-care.jpg 1080w" sizes="(max-width: 880px) 92vw, 46vw"></div>
 </div>
 <div class="filters">
   <button class="filter-btn active" data-filter="all">all drips</button>
@@ -200,7 +200,8 @@
     <a href="mailto:info@ivsforme.com">✉️ info@ivsforme.com</a>
     <span>🕐 Mon–Fri · Sat by appointment only</span>
   </div>
-  <div class="bottom-note">Every drip administered by a licensed MD, PA, or NP 🩺 · Queens &amp; Long Island<br>Free B-12 with every drip · Buy 5 get 1 free · $20 off your first visit with WELCOME20</div>
+  </main>
+<div class="bottom-note">Every drip administered by a licensed MD, PA, or NP 🩺 · Queens &amp; Long Island<br>Free B-12 with every drip · Buy 5 get 1 free · $20 off your first visit with WELCOME20</div>
 <script>
   document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.card').forEach(c=>{if(f==='all'){c.classList.remove('hidden');}else{c.classList.toggle('hidden',!(c.dataset.cat||'').includes(f));}});});});
   function copyCode(){navigator.clipboard.writeText('WELCOME20').catch(()=>{});const b=document.getElementById('code-btn');b.textContent='copied! ✓';b.classList.add('copied');setTimeout(()=>{b.textContent='WELCOME20 · tap to copy';b.classList.remove('copied');},2000);}
