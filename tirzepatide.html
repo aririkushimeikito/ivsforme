@@ -30,7 +30,9 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ivsforme.com/index.html"},{"@type":"ListItem","position":2,"name":"Tirzepatide","item":"https://www.ivsforme.com/tirzepatide.html"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap"></noscript>
 <style>
   * { margin:0;padding:0;box-sizing:border-box; }
   body { background:#FBF8F2;color:#1A1A1A;font-family:'DM Sans',sans-serif; }
@@ -50,13 +52,13 @@
   .badge{position:relative;display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#123524;background:#6FA5C9;padding:7px 16px;border-radius:30px;margin-bottom:22px;font-weight:600;}
   h1{position:relative;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(42px,6.5vw,76px);font-weight:800;letter-spacing:-2.5px;line-height:.98;color:#1A1A1A;margin-bottom:18px;}
   h1 .hl{background:linear-gradient(120deg,#6FA5C9,#2E7D4F);-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .hero-sub{position:relative;font-size:16px;color:rgba(26,26,26,.6);max-width:510px;margin:0 auto 28px;font-weight:400;line-height:1.65;}
+  .hero-sub{position:relative;font-size:16px;color:rgba(26,26,26,.66);max-width:510px;margin:0 auto 28px;font-weight:400;line-height:1.65;}
   .hero-cta{position:relative;display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;}
   .btn-primary{padding:14px 32px;border-radius:30px;border:none;background:#1A1A1A;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .18s;}
   .btn-primary:hover{background:#6FA5C9;color:#1A1A1A;}
   .btn-secondary{padding:14px 28px;border-radius:30px;border:2px solid #1A1A1A;background:transparent;color:#1A1A1A;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .18s;}
   .btn-secondary:hover{background:#1A1A1A;color:#fff;}
-  .price-pill{position:relative;display:inline-block;margin-top:20px;font-size:13px;color:rgba(26,26,26,.55);font-weight:500;}
+  .price-pill{position:relative;display:inline-block;margin-top:20px;font-size:13px;color:rgba(26,26,26,.68);font-weight:500;}
   .price-pill strong{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;color:#1A1A1A;}
   .stats{max-width:900px;margin:8px auto 0;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
   .stat{background:#123524;border-radius:22px;padding:28px 22px;text-align:center;}
@@ -64,34 +66,34 @@
   .stat-label{font-size:13px;color:rgba(251,248,242,.75);line-height:1.5;}
   .dual{max-width:900px;margin:56px auto 0;padding:0 24px;}
   .dual-card{background:#6FA5C9;border-radius:26px;padding:38px 36px;box-shadow:6px 6px 0 #1A1A1A;text-align:center;}
-  .dual-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;font-weight:800;letter-spacing:-1px;color:#0d2a3d;margin-bottom:12px;}
-  .dual-card p{font-size:15px;color:rgba(13,42,61,.75);max-width:560px;margin:0 auto 26px;line-height:1.6;}
+  .dual-card h3,.dual-card h2{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;font-weight:800;letter-spacing:-1px;color:#0d2a3d;margin-bottom:12px;}
+  .dual-card p{font-size:15px;color:#0D2A3D;max-width:560px;margin:0 auto 26px;line-height:1.6;}
   .dual-tags{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center;}
   .dual-tag{background:#FBF8F2;border-radius:16px;padding:18px 24px;min-width:200px;}
   .dual-tag .dt-label{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:800;color:#1A1A1A;margin-bottom:4px;}
-  .dual-tag .dt-desc{font-size:12px;color:rgba(26,26,26,.6);line-height:1.45;}
+  .dual-tag .dt-desc{font-size:12px;color:rgba(26,26,26,.66);line-height:1.45;}
   .dual-plus{display:flex;align-items:center;font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:800;color:#0d2a3d;}
   .section{max-width:900px;margin:60px auto 0;padding:0 24px;}
   .section-eyebrow{text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#2E7D4F;font-weight:700;margin-bottom:10px;}
   .section-title{text-align:center;font-family:'Bricolage Grotesque',sans-serif;font-size:34px;font-weight:800;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.05;}
-  .section-lead{text-align:center;font-size:15px;color:rgba(26,26,26,.6);max-width:520px;margin:0 auto 34px;line-height:1.6;}
+  .section-lead{text-align:center;font-size:15px;color:rgba(26,26,26,.66);max-width:520px;margin:0 auto 34px;line-height:1.6;}
   .benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
   .benefit{background:#fff;border:2px solid #1A1A1A;border-radius:20px;padding:24px 22px;box-shadow:4px 4px 0 #1A1A1A;}
   .benefit-icon{font-size:26px;margin-bottom:10px;display:block;}
-  .benefit h4{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;font-weight:700;margin-bottom:7px;letter-spacing:-.3px;}
-  .benefit p{font-size:13px;color:rgba(26,26,26,.6);line-height:1.55;}
+  .benefit h4,.benefit h3{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;font-weight:700;margin-bottom:7px;letter-spacing:-.3px;}
+  .benefit p{font-size:13px;color:rgba(26,26,26,.66);line-height:1.55;}
   .compare{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:2px solid #1A1A1A;border-radius:20px;overflow:hidden;box-shadow:4px 4px 0 #1A1A1A;}
   .compare th,.compare td{padding:16px 20px;text-align:left;font-size:14px;border-bottom:1px solid rgba(26,26,26,.1);}
   .compare th{background:#123524;color:#FBF8F2;font-weight:600;font-size:13px;}
   .compare th.hilite{background:#6FA5C9;color:#0d2a3d;}
-  .compare td:first-child{font-weight:500;color:rgba(26,26,26,.6);}
+  .compare td:first-child{font-weight:500;color:rgba(26,26,26,.66);}
   .compare td.hilite{background:rgba(111,165,201,.1);font-weight:600;}
   .compare tr:last-child td{border-bottom:none;}
   .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
   .how-step{background:#fff;border:2px solid #1A1A1A;border-radius:18px;padding:20px 18px;box-shadow:3px 3px 0 #1A1A1A;}
   .how-num{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:#6FA5C9;margin-bottom:8px;}
-  .how-step h4{font-size:14px;font-weight:600;margin-bottom:5px;}
-  .how-step p{font-size:12px;color:rgba(26,26,26,.55);line-height:1.5;}
+  .how-step h4,.how-step h3{font-size:14px;font-weight:600;margin-bottom:5px;}
+  .how-step p{font-size:12px;color:rgba(26,26,26,.68);line-height:1.5;}
   .price-card{background:#123524;border-radius:26px;padding:40px 36px;max-width:560px;margin:0 auto;text-align:center;box-shadow:6px 6px 0 #1A1A1A;}
   .price-card .pc-tag{display:inline-block;font-size:10px;letter-spacing:1px;text-transform:uppercase;background:#6FA5C9;color:#0d2a3d;padding:5px 14px;border-radius:20px;font-weight:700;margin-bottom:16px;}
   .price-card .pc-price{font-family:'Bricolage Grotesque',sans-serif;font-size:60px;font-weight:800;color:#FBF8F2;line-height:1;}
@@ -103,14 +105,14 @@
   .pc-cta{width:100%;padding:15px 0;border-radius:30px;border:none;background:#6FA5C9;color:#0d2a3d;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .18s;}
   .pc-cta:hover{background:#fff;}
   .faq-item{background:#fff;border:2px solid #1A1A1A;border-radius:16px;padding:18px 22px;margin-bottom:12px;box-shadow:3px 3px 0 #1A1A1A;}
-  .faq-item h4{font-size:14px;font-weight:600;margin-bottom:6px;}
-  .faq-item p{font-size:13px;color:rgba(26,26,26,.6);line-height:1.55;}
+  .faq-item h4,.faq-item h3{font-size:14px;font-weight:600;margin-bottom:6px;}
+  .faq-item p{font-size:13px;color:rgba(26,26,26,.66);line-height:1.55;}
   .final-cta{background:#123524;margin:60px 0 0;padding:56px 32px;text-align:center;}
   .final-cta h2{font-family:'Bricolage Grotesque',sans-serif;font-size:36px;font-weight:800;color:#FBF8F2;letter-spacing:-1.5px;margin-bottom:12px;line-height:1.05;}
   .final-cta p{font-size:15px;color:rgba(251,248,242,.7);margin-bottom:26px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.6;}
   .final-cta .btn-primary{background:#6FA5C9;color:#0d2a3d;}
   .final-cta .btn-primary:hover{background:#fff;}
-  .bottom-note{text-align:center;padding:32px 20px;font-size:11px;color:rgba(26,26,26,.42);letter-spacing:.3px;line-height:1.9;font-weight:500;}
+  .bottom-note{text-align:center;padding:32px 20px;font-size:11px;color:rgba(26,26,26,.66);letter-spacing:.3px;line-height:1.9;font-weight:500;}
   @keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
   .benefit,.stat,.how-step{animation:pop .4s ease forwards;}
 
@@ -127,17 +129,17 @@
   .nav-cta{font-size:13px;font-weight:600;color:#fff;background:#2E7D4F;text-decoration:none;padding:10px 18px;border-radius:30px;transition:all .15s;}
   .nav-cta:hover{background:#1A1A1A;}
   /* Carla Sans brand font for headings, Bricolage kept for hero display */
-  h2, h3, h4, .section-title, .services-title, .how-title, .section-head, .sh, .prog-name, .card-name, .benefit h4, .dual-card h3, .stat-label, .tier-name { font-family:'Carla Sans','DM Sans',sans-serif !important; }
+  h2, h3, h4, .section-title, .services-title, .how-title, .section-head, .sh, .prog-name, .card-name, .benefit h4,.benefit h3, .dual-card h3,.dual-card h2, .stat-label, .tier-name { font-family:'Carla Sans','DM Sans',sans-serif !important; }
   h1, .price-main, .prog-price, .pc-price, .stat-num, .card-price, .nad-dose-price, .how-num, .price-card .pc-price { font-family:'Bricolage Grotesque',sans-serif !important; }
 
   /* Footer contact row (site-wide) — single line, no borders */
   .footer-contact{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 26px;max-width:1100px;margin:40px auto 16px;padding:0 24px;font-size:13px;line-height:1.7;}
-  .footer-contact a,.footer-contact span{display:inline-flex;align-items:center;gap:7px;color:rgba(26,26,26,.6);text-decoration:none;font-weight:500;white-space:nowrap;transition:color .15s;}
+  .footer-contact a,.footer-contact span{display:inline-flex;align-items:center;gap:7px;color:rgba(26,26,26,.66);text-decoration:none;font-weight:500;white-space:nowrap;transition:color .15s;}
   .footer-contact a:hover{color:#2E7D4F;}
   @media(max-width:520px){.footer-contact a,.footer-contact span{white-space:normal;line-height:1.5;}}
 </style>
 <link rel="stylesheet" href="responsive.css?v=9">
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:100;background:#FBF8F2;border-bottom:2px solid #1A1A1A;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;gap:12px;font-family:'DM Sans',sans-serif;">
@@ -206,7 +208,7 @@
 </div>
 <div class="dual">
   <div class="dual-card">
-    <h3>why dual-action wins</h3>
+    <h2>why dual-action wins</h2>
     <p>Semaglutide works on one hormone. Tirzepatide works on two — combining GLP-1 with GIP to amplify appetite control, fullness, and metabolic effect. That's why it's shown the highest average weight loss of any GLP-1 medication to date.</p>
     <div class="dual-tags">
       <div class="dual-tag"><div class="dt-label">GLP-1</div><div class="dt-desc">Reduces appetite &amp; slows digestion</div></div>
@@ -219,10 +221,10 @@
   <div class="section-eyebrow">Why tirzepatide</div>
   <div class="section-title">what you can expect</div>
   <div class="benefits">
-    <div class="benefit"><span class="benefit-icon">📉</span><h4>Greater weight loss</h4><p>Higher average reduction than single-pathway GLP-1s in head-to-head trials.</p></div>
-    <div class="benefit"><span class="benefit-icon">🍽️</span><h4>Powerful appetite control</h4><p>Dual hormone action quiets hunger and food noise even more effectively.</p></div>
-    <div class="benefit"><span class="benefit-icon">⚡</span><h4>Better metabolic effect</h4><p>GIP supports insulin sensitivity and how efficiently your body handles fat.</p></div>
-    <div class="benefit"><span class="benefit-icon">🔁</span><h4>Steady, supervised progress</h4><p>Gradual titration and monthly check-ins keep results consistent and comfortable.</p></div>
+    <div class="benefit"><span class="benefit-icon">📉</span><h3>Greater weight loss</h3><p>Higher average reduction than single-pathway GLP-1s in head-to-head trials.</p></div>
+    <div class="benefit"><span class="benefit-icon">🍽️</span><h3>Powerful appetite control</h3><p>Dual hormone action quiets hunger and food noise even more effectively.</p></div>
+    <div class="benefit"><span class="benefit-icon">⚡</span><h3>Better metabolic effect</h3><p>GIP supports insulin sensitivity and how efficiently your body handles fat.</p></div>
+    <div class="benefit"><span class="benefit-icon">🔁</span><h3>Steady, supervised progress</h3><p>Gradual titration and monthly check-ins keep results consistent and comfortable.</p></div>
   </div>
 </div>
 <div class="section">
@@ -242,10 +244,10 @@
   <div class="section-eyebrow">Simple process</div>
   <div class="section-title">how to get started</div>
   <div class="how-grid">
-    <div class="how-step"><div class="how-num">01</div><h4>Book a visit</h4><p>Come in for your physician evaluation — no referral needed.</p></div>
-    <div class="how-step"><div class="how-num">02</div><h4>Get your plan</h4><p>We build a dosing schedule tailored to your body and goals.</p></div>
-    <div class="how-step"><div class="how-num">03</div><h4>Start weekly</h4><p>Begin your weekly injections with full provider oversight.</p></div>
-    <div class="how-step"><div class="how-num">04</div><h4>Track & adjust</h4><p>Monthly check-ins to fine-tune your dose as you progress.</p></div>
+    <div class="how-step"><div class="how-num">01</div><h3>Book a visit</h3><p>Come in for your physician evaluation — no referral needed.</p></div>
+    <div class="how-step"><div class="how-num">02</div><h3>Get your plan</h3><p>We build a dosing schedule tailored to your body and goals.</p></div>
+    <div class="how-step"><div class="how-num">03</div><h3>Start weekly</h3><p>Begin your weekly injections with full provider oversight.</p></div>
+    <div class="how-step"><div class="how-num">04</div><h3>Track & adjust</h3><p>Monthly check-ins to fine-tune your dose as you progress.</p></div>
   </div>
 </div>
 <div class="section">
@@ -270,11 +272,11 @@
 <div class="section">
   <div class="section-eyebrow">Questions?</div>
   <div class="section-title">good to know</div>
-  <div class="faq-item"><h4>How much more effective is it than semaglutide?</h4><p>In clinical trials, tirzepatide showed an average of around 21% body weight reduction at the highest dose vs. ~15% for semaglutide. Results vary by person and depend on dose and lifestyle.</p></div>
-  <div class="faq-item"><h4>Is the medication included in the $550?</h4><p>Yes — medication, provider visits, and check-ins are all covered. No separate pharmacy bill, no hidden fees.</p></div>
-  <div class="faq-item"><h4>Are there side effects?</h4><p>The most common are mild and temporary — nausea, reduced appetite, or digestive changes as your body adjusts. Your provider monitors you and titrates your dose to keep you comfortable.</p></div>
-  <div class="faq-item"><h4>Why is it more expensive than semaglutide?</h4><p>Tirzepatide is a newer, dual-action medication and generally carries a higher cost. Many people find the stronger results worth the difference — your provider can help you decide.</p></div>
-  <div class="faq-item"><h4>Can I switch or cancel?</h4><p>Yes — it's month-to-month with no contracts, and you can discuss switching medications with your provider anytime.</p></div>
+  <div class="faq-item"><h3>How much more effective is it than semaglutide?</h3><p>In clinical trials, tirzepatide showed an average of around 21% body weight reduction at the highest dose vs. ~15% for semaglutide. Results vary by person and depend on dose and lifestyle.</p></div>
+  <div class="faq-item"><h3>Is the medication included in the $550?</h3><p>Yes — medication, provider visits, and check-ins are all covered. No separate pharmacy bill, no hidden fees.</p></div>
+  <div class="faq-item"><h3>Are there side effects?</h3><p>The most common are mild and temporary — nausea, reduced appetite, or digestive changes as your body adjusts. Your provider monitors you and titrates your dose to keep you comfortable.</p></div>
+  <div class="faq-item"><h3>Why is it more expensive than semaglutide?</h3><p>Tirzepatide is a newer, dual-action medication and generally carries a higher cost. Many people find the stronger results worth the difference — your provider can help you decide.</p></div>
+  <div class="faq-item"><h3>Can I switch or cancel?</h3><p>Yes — it's month-to-month with no contracts, and you can discuss switching medications with your provider anytime.</p></div>
 </div>
 <div class="final-cta">
   <h2>ready for the strongest option?</h2>

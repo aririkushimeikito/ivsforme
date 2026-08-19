@@ -19,7 +19,7 @@ h2,h3,h4,.services-title,.how-title,.section-title,.section-head,.sh,.prog-name,
 .services-title,.how-title,.section-title{font-size:clamp(19px,2.3vw,27px) !important;letter-spacing:.22em !important;color:var(--ink);}
 .final-cta h2{font-size:clamp(21px,2.8vw,30px) !important;letter-spacing:.18em !important;}
 /* long-form titles stay sentence case for readability */
-.art-body h2,.art-body h3,.post-body h3,.related-card h4,.jcard-body h3,.featured-body h2,.faq-q,.art-header h1,.tldr h2{text-transform:none !important;letter-spacing:-.2px !important;}
+.art-body h2,.art-body h3,.post-body h3,.related-card h4,.related-card h3,.jcard-body h3,.featured-body h2,.faq-q,.art-header h1,.tldr h2{text-transform:none !important;letter-spacing:-.2px !important;}
 .art-header h1{font-size:clamp(30px,4.4vw,44px) !important;line-height:1.18 !important;}
 .hl{background:linear-gradient(120deg,var(--blue),var(--blue)) !important;-webkit-background-clip:text !important;background-clip:text !important;}
 .hero-sub,.services-lead{color:var(--body) !important;}
@@ -66,7 +66,7 @@ nav[style*="sticky"] > a[aria-label]{color:#0F1220 !important;}
 /* ---------- Dark blocks: forest green → deep navy / blue ---------- */
 .final-cta{background:linear-gradient(120deg,#17482E,var(--blue)) !important;}
 .tldr,.stat,.side-card,.service-card.dark,.card.featured,.prog-card.featured,.featured,.post-media.weight,.author-avatar{background:var(--navy) !important;border-color:var(--navy) !important;}
-.tldr h2{color:#9BC96B !important;}
+.tldr h2,.art-body .tldr h2{color:#9BC96B !important;}
 .stat-num{color:#9BC96B !important;}
 .art-body h2{color:var(--navy) !important;}
 .art-body strong{color:var(--navy) !important;}
@@ -137,9 +137,24 @@ nav[style*="sticky"] > a[aria-label]{color:#0F1220 !important;}
 /* ---------- Accessibility ---------- */
 .footer-note{color:rgba(251,248,242,.66) !important;}
 .footer-links a{color:rgba(251,248,242,.82) !important;}
-.book-fineprint,.newsletter-note{color:rgba(26,26,26,.6) !important;}
+.book-fineprint,.newsletter-note{color:rgba(26,26,26,.66) !important;}
 @media(max-width:900px){
   .footer-links a{padding:11px 14px !important;}
   .footer-contact a,.footer-contact span{padding:6px 2px;}
   .nav-desktop a{padding:11px 12px !important;}
 }
+
+/* ---- Contrast & tap-target fixes (Lighthouse accessibility) ---- */
+.badge,.hero-eyebrow,.art-tag,.prog-tag,.calc-label,.save-badge{color:var(--blue-dark) !important;}
+.service-card.blue p{color:#123524 !important;}
+.service-card.blue .service-price,.service-card.blue .service-arrow{color:#0E2A1C !important;}
+.service-card.green .service-price,.service-card.green .service-arrow{color:#123524 !important;}
+.service-card.dark .service-icon{color:#EAF2EC;}
+.jcard-media[style*="#123524"]{color:#EAF2EC;}
+a[href^="tel:"],a[href^="mailto:"]{display:inline-block;padding:3px 0;}
+.featured-tag,.featured-badge,.nad-badge,.new-patient-badge{color:#4A2500 !important;}
+a[href*="google.com/maps"]{display:inline-block;padding:5px 0;}
+.featured-arrow{color:#B7D9A0 !important;}
+.post-media.weight{color:#EAF2EC;}
+.featured-meta{color:rgba(251,248,242,.7) !important;}
+.card.featured .perk-check,.prog-card.featured .prog-check{color:#B7D9A0 !important;}

@@ -29,7 +29,9 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","@id":"https://www.ivsforme.com/#clinic","name":"IVs For Me","url":"https://www.ivsforme.com/","image":"https://www.ivsforme.com/images/og-cover.jpg","logo":"https://www.ivsforme.com/favicon.svg","description":"Physician-led IV drip therapy, medical weight loss, wellness shots, and peptide therapy across Queens & Long Island.","telephone":"+1-516-363-3334","email":"info@ivsforme.com","address":{"@type":"PostalAddress","streetAddress":"142-42 Booth Memorial Ave","addressLocality":"Flushing","addressRegion":"NY","postalCode":"11355","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":40.7395,"longitude":-73.8210},"hasMap":"https://www.google.com/maps/search/?api=1&query=142-42+Booth+Memorial+Ave%2C+Flushing%2C+NY+11355","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"]}],"areaServed":["Queens, NY","Long Island, NY","Flushing, NY"],"medicalSpecialty":["PreventiveMedicine","Nutrition"],"priceRange":"$$","currenciesAccepted":"USD","availableService":[{"@type":"MedicalTherapy","name":"IV Drip Therapy"},{"@type":"MedicalTherapy","name":"Medical Weight Loss (GLP-1)"},{"@type":"MedicalTherapy","name":"Wellness Injections"},{"@type":"MedicalTherapy","name":"Peptide Therapy"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap"></noscript>
 <style>
   * { margin:0;padding:0;box-sizing:border-box; }
   body { background:#FBF8F2;color:#1A1A1A;font-family:'DM Sans',sans-serif; }
@@ -49,18 +51,18 @@
   .badge{position:relative;display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#123524;background:#9BC96B;padding:7px 16px;border-radius:30px;margin-bottom:24px;font-weight:600;}
   h1{position:relative;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(46px,8vw,92px);font-weight:800;letter-spacing:-3px;line-height:.94;color:#1A1A1A;margin-bottom:20px;}
   h1 .hl{background:linear-gradient(120deg,#2E7D4F,#6FA5C9);-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .hero-sub{position:relative;font-size:17px;color:rgba(26,26,26,.6);max-width:520px;margin:0 auto 32px;font-weight:400;line-height:1.65;}
+  .hero-sub{position:relative;font-size:17px;color:rgba(26,26,26,.66);max-width:520px;margin:0 auto 32px;font-weight:400;line-height:1.65;}
   .hero-cta{position:relative;display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;}
   .btn-primary{padding:15px 34px;border-radius:30px;border:none;background:#1A1A1A;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all .18s;text-decoration:none;display:inline-block;}
   .btn-primary:hover{background:#2E7D4F;}
   .btn-secondary{padding:15px 30px;border-radius:30px;border:2px solid #1A1A1A;background:transparent;color:#1A1A1A;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all .18s;text-decoration:none;display:inline-block;}
   .btn-secondary:hover{background:#1A1A1A;color:#fff;}
   .trust{max-width:900px;margin:12px auto 0;padding:0 24px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;}
-  .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(26,26,26,.6);font-weight:500;}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(26,26,26,.66);font-weight:500;}
   .trust-item .dot{width:6px;height:6px;border-radius:50%;background:#2E7D4F;}
   .services{max-width:1000px;margin:64px auto 0;padding:0 24px;}
   .services-title{text-align:center;font-family:'Bricolage Grotesque',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1.5px;margin-bottom:12px;}
-  .services-lead{text-align:center;font-size:15px;color:rgba(26,26,26,.6);max-width:480px;margin:0 auto 40px;line-height:1.6;}
+  .services-lead{text-align:center;font-size:15px;color:rgba(26,26,26,.66);max-width:480px;margin:0 auto 40px;line-height:1.6;}
   .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
   .service-card{background:#fff;border:2px solid #1A1A1A;border-radius:24px;padding:30px 26px;box-shadow:5px 5px 0 #1A1A1A;transition:transform .18s,box-shadow .18s;text-decoration:none;color:inherit;display:flex;flex-direction:column;}
   .service-card:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 #1A1A1A;}
@@ -68,11 +70,11 @@
   .service-card.blue{background:#6FA5C9;border-color:#1A1A1A;}
   .service-card.green{background:#E8D24A;border-color:#1A1A1A;}
   .service-icon{font-size:32px;margin-bottom:14px;}
-  .service-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.7px;margin-bottom:8px;line-height:1;}
-  .service-card.dark h3{color:#FBF8F2;}
-  .service-card.blue h3{color:#0d2a3d;}
-  .service-card.green h3{color:#1A1A1A;}
-  .service-card p{font-size:13px;color:rgba(26,26,26,.6);line-height:1.55;flex:1;margin-bottom:18px;}
+  .service-card h3,.service-card h2{font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.7px;margin-bottom:8px;line-height:1;}
+  .service-card.dark h3,.service-card.dark h2{color:#FBF8F2;}
+  .service-card.blue h3,.service-card.blue h2{color:#0d2a3d;}
+  .service-card.green h3,.service-card.green h2{color:#1A1A1A;}
+  .service-card p{font-size:13px;color:rgba(26,26,26,.66);line-height:1.55;flex:1;margin-bottom:18px;}
   .service-card.dark p{color:rgba(251,248,242,.7);}
   .service-card.blue p{color:rgba(13,42,61,.72);}
   .service-card.green p{color:rgba(26,26,26,.72);}
@@ -87,8 +89,8 @@
   .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
   .why-item{text-align:center;padding:8px;}
   .why-icon{font-size:30px;margin-bottom:10px;}
-  .why-item h4{font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;letter-spacing:-.3px;}
-  .why-item p{font-size:13px;color:rgba(26,26,26,.6);line-height:1.5;}
+  .why-item h4,.why-item h3{font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;letter-spacing:-.3px;}
+  .why-item p{font-size:13px;color:rgba(26,26,26,.66);line-height:1.5;}
   .final-cta{background:#123524;margin:72px 0 0;padding:64px 32px;text-align:center;position:relative;overflow:hidden;}
   .final-cta h2{position:relative;font-family:'Bricolage Grotesque',sans-serif;font-size:42px;font-weight:800;color:#FBF8F2;letter-spacing:-2px;margin-bottom:14px;line-height:1.02;}
   .final-cta p{position:relative;font-size:16px;color:rgba(251,248,242,.7);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.6;}
@@ -125,7 +127,7 @@
   .jcard-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1;}
   .jcard-tag{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#2E7D4F;font-weight:700;}
   .jcard-body h3{font-family:'Carla Sans','DM Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.3px;line-height:1.2;}
-  .jcard-body p{font-size:13px;color:rgba(26,26,26,.6);line-height:1.5;flex:1;margin:0;}
+  .jcard-body p{font-size:13px;color:rgba(26,26,26,.66);line-height:1.5;flex:1;margin:0;}
   .jcard-arrow{font-size:12px;font-weight:700;color:#1A1A1A;}
   .journal-all{text-align:center;margin-top:28px;}
   @media(max-width:820px){.journal-grid{grid-template-columns:1fr;}}
@@ -151,7 +153,7 @@
   @media(max-width:520px){.footer-contact a,.footer-contact span{white-space:normal;line-height:1.5;}}
 </style>
 <link rel="stylesheet" href="responsive.css?v=9">
-<link rel="stylesheet" href="theme.css?v=4">
+<link rel="stylesheet" href="theme.css?v=5">
 </head>
 <body>
 <nav style="position:sticky;top:0;z-index:100;background:#FBF8F2;border-bottom:2px solid #1A1A1A;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;gap:12px;font-family:'DM Sans',sans-serif;">
@@ -223,35 +225,35 @@
   <div class="service-grid">
     <a href="iv-drip-menu.html" class="service-card" title="IV Drip Therapy Menu">
       <div class="service-icon">💧</div>
-      <h3>IV Drip Therapy</h3>
+      <h2>IV Drip Therapy</h2>
       <p>15+ physician-formulated drips for immunity, recovery, beauty, performance, and longevity. NAD+, Myers Cocktail, Glow, and more.</p>
       <div class="service-price">From $250 · free B-12 included</div>
       <span class="service-arrow">View the menu →</span>
     </a>
     <a href="weight-loss.html" class="service-card dark" title="Medical Weight Loss Programs">
       <div class="service-icon">⚖️</div>
-      <h3>Medical Weight Loss</h3>
+      <h2>Medical Weight Loss</h2>
       <p>Physician-supervised GLP-1 programs with semaglutide and tirzepatide. All-inclusive monthly pricing — medication and care included.</p>
       <div class="service-price">From $450/mo all-inclusive</div>
       <span class="service-arrow">Explore programs →</span>
     </a>
     <a href="wellness-shots.html" class="service-card" title="Wellness Shots">
       <div class="service-icon">💉</div>
-      <h3>Wellness Shots</h3>
+      <h2>Wellness Shots</h2>
       <p>Quick medical-grade injectable vitamins, antioxidants, and longevity boosts — in minutes, not hours. B12, NAD+, Glutathione, and more.</p>
       <div class="service-price">From $35 · walk-ins welcome</div>
       <span class="service-arrow">See the shots →</span>
     </a>
     <a href="peptides.html" class="service-card blue" title="Peptide Therapy Programs">
       <div class="service-icon">🧬</div>
-      <h3>Peptide Therapy</h3>
+      <h2>Peptide Therapy</h2>
       <p>Physician-designed regenerative programs for beauty, longevity, recovery, and performance. Glass Skin, Core Shredding, Cognitive Clarity, and more.</p>
       <div class="service-price">From $197 · fully monitored</div>
       <span class="service-arrow">Explore programs →</span>
     </a>
     <a href="iv-membership.html" class="service-card green" title="IV Membership Plans">
       <div class="service-icon">✦</div>
-      <h3>Membership</h3>
+      <h2>Membership</h2>
       <p>Make optimization a habit. Monthly drip plans and the NAD+ Club — save on every visit and lock in your longevity routine.</p>
       <div class="service-price">From $229/mo · save up to 15%</div>
       <span class="service-arrow">See plans →</span>
@@ -262,10 +264,10 @@
   <div class="services-title">why choose us</div>
   <div class="services-lead" style="margin-bottom:36px;">Contemporary wellness with the credentials to back it up.</div>
   <div class="why-grid">
-    <div class="why-item"><div class="why-icon">🩺</div><h4>Physician-led</h4><p>Every treatment overseen by a licensed MD, PA, or NP.</p></div>
-    <div class="why-item"><div class="why-icon">💸</div><h4>Transparent pricing</h4><p>Real prices upfront. No consult fees, no surprises.</p></div>
-    <div class="why-item"><div class="why-icon">🎯</div><h4>Personalized</h4><p>Plans built around your goals, not a one-size-fits-all menu.</p></div>
-    <div class="why-item"><div class="why-icon">📍</div><h4>Local & convenient</h4><p>In-office care across Queens &amp; Long Island.</p></div>
+    <div class="why-item"><div class="why-icon">🩺</div><h3>Physician-led</h3><p>Every treatment overseen by a licensed MD, PA, or NP.</p></div>
+    <div class="why-item"><div class="why-icon">💸</div><h3>Transparent pricing</h3><p>Real prices upfront. No consult fees, no surprises.</p></div>
+    <div class="why-item"><div class="why-icon">🎯</div><h3>Personalized</h3><p>Plans built around your goals, not a one-size-fits-all menu.</p></div>
+    <div class="why-item"><div class="why-icon">📍</div><h3>Local & convenient</h3><p>In-office care across Queens &amp; Long Island.</p></div>
   </div>
 </div>
 <div class="photo-band">
